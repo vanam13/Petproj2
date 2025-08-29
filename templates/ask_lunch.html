@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Ask for Lunch{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-5 text-center">
+                        <div class="meme-header mb-4">
+                            <h2 class="fw-bold text-primary mb-3">Gayathriii, Lunch? <span class="text-muted" style="font-weight: 400; font-size: .9rem; color: var(--muted) !important; opacity: .9;">(nervously sweating 😅)</span></h2>
+                            <div class="d-flex justify-content-center">
+                                <img src="{{ url_for('static', filename='images/sweating.jpeg') }}" alt="nervously sweating" class="img-fluid rounded-4 shadow app-img">
+                            </div>
+                        </div>
+                        
+                        <form method="POST" class="d-inline">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-auto">
+                                    <button type="submit" name="lunch_response" value="yes" class="btn btn-success btn-lg px-5">
+                                        chal chalo chalo
+                                    </button>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" name="lunch_response" value="no" class="btn btn-outline-secondary btn-lg px-5">
+                                        babu pakakkeli aadukoamma
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div class="mt-4">
+                            <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+                                Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.meme-header {
+    background: radial-gradient(600px 300px at 0% 0%, rgba(255, 209, 102, 0.08), transparent 60%),
+                radial-gradient(600px 300px at 100% 0%, rgba(6, 214, 160, 0.08), transparent 55%);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+</style>
+{% endblock %}

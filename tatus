@@ -1,0 +1,3 @@
+[33md9f3ebd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Fix: Restore complete WhatsApp functionality with both accept and decline notifications
+[33m8c2a235[m Feature: Add WhatsApp notifications for declined lunch invitations
+[33me8a876d[m Fix: Add actual Twilio credentials to main branch for production deployment
